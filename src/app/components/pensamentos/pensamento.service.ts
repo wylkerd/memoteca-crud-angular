@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pensamento } from './pensamento';
+import { Observable } from 'rxjs';
 
 // Service é nada mais que um Repository, que possui lógica do negócio e acessa a base de dados
 
@@ -14,8 +15,12 @@ export class PensamentoService {
   // Injetando HttpClient, e determinado  http como atributo desta Classe
   constructor(private http: HttpClient) { }
 
-  listar() {
+  listar(): Observable<Pensamento[]> {
     return this.http.get<Pensamento[]>(this.API)
+  }
+
+  criar(pensamento: Pensamento): Observable<Pensamento> {
+    return this.http.post<Pensamento>(this.API, pensamento)
   }
 
 }

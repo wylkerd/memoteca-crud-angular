@@ -15,7 +15,10 @@ export class ListarPensamentosComponent implements OnInit {
 
   ngOnInit(): void {
     // Ao renderizar o componente pela 1º vez
-    this.service.listar()
+    //Subscrible() para o Observable identificar todas as mudanças, é como um then()
+    this.service.listar().subscribe((listasPensamentos) => {
+      this.listaPensamentos = listasPensamentos
+    })
   }
 
 }
