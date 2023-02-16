@@ -1,7 +1,9 @@
 <!-- Inserindo seletor do componente cabeçalho através da tag com o mesmo nome
 Seletor está em ./components/cabecalho/cabecalho.component.ts -->
+<!-- router-outlet diretiva do Angular que vai preencher dinâmicamente o componente desejado -->
+
 <app-cabecalho></app-cabecalho>
 <main>
-  <app-criar-pensamento></app-criar-pensamento>
+  <router-outlet></router-outlet>
 </main>
 <app-rodape></app-rodape>
