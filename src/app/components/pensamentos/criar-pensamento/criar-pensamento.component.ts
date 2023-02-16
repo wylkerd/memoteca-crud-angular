@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './criar-pensamento.component.html',
   styleUrls: ['./criar-pensamento.component.css']
 })
+
 export class CriarPensamentoComponent implements OnInit {
 
   // Atributos da Classe do Componente
@@ -18,6 +19,14 @@ export class CriarPensamentoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  criarPensamento() {
+    alert('Novo Pensamento criado!')
+  }
+
+  cancelarPensamento() {
+    alert('Pensamento cancelado!')
   }
 
 }

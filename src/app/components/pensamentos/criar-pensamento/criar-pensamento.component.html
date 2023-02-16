@@ -1,8 +1,8 @@
 <!-- Arquivo denomidado Template, onde está a visualização/interação do usuário -->
 
 <!-- Property Binding -->
-<!-- Ao colocar colchetes [values], o Angular vai na Classe TS buscar a prop condizente com o nome passado -->
-<!-- Interpolação com Property Binding utiliza duplos colchetes {{ prop.name }} -->
+<!-- Vinculação de propriedade: Ao colocar colchetes [values], o Angular vai na Classe TS buscar a prop condizente com o nome passado -->
+<!-- Interpolação: Com Property Binding utiliza duplos colchetes {{ prop.name }} -->
 <section class="container criar-pensamentos ff-inter">
   <header class="header">
     <h2>Adicione um <br>pensamento novo:</h2>
@@ -94,8 +94,9 @@
       </div>
 
       <div class="acoes">
-        <button class="botao">Salvar</button>
-        <button class="botao">Cancelar</button>
+        <!-- Event Binding (evento-nome)="acaoDesejada() da classe TS" -->
+        <button (click)="criarPensamento()" class="botao">Salvar</button>
+        <button (click)="cancelarPensamento()" class="botao">Cancelar</button>
       </div>
     </div>
   </form>
