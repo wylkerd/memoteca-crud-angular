@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pensamento } from '../pensamento';
 // Arquivo denomidado Component (Classe Typescript), onde terá a lógica/comportamento/funcionalidades
 @Component({
   selector: 'app-criar-pensamento',
@@ -9,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class CriarPensamentoComponent implements OnInit {
 
   // Atributos da Classe do Componente
-  pensamento = {
-    id: '1',
+  pensamento: Pensamento = {
+    id: 1,
     conteudo: 'Aprendendo Angular',
     autoria: 'Dev',
     modelo: 'modelo1'

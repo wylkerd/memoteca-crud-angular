@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-pensamento',
@@ -9,7 +10,8 @@ export class PensamentoComponent implements OnInit {
 
   // Atributo da Classe
   // Este Decorator indica que esta váriavel pode receber os dados como parâmetro da Classe, através do atributo [pensamento]
-  @Input() pensamento = {
+  @Input() pensamento: Pensamento = {
+    id: 0,
     conteudo: 'I love Angular',
     autoria: 'Wyl',
     modelo: 'modelo3'
