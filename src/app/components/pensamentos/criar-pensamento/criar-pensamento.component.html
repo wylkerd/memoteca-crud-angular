@@ -1,8 +1,11 @@
 <!-- Arquivo denomidado Template, onde está a visualização/interação do usuário -->
 
 <!-- Property Binding -->
-<!-- Vinculação de propriedade: Ao colocar colchetes [values], o Angular vai na Classe TS buscar a prop condizente com o nome passado -->
+<!-- Vinculação de propriedade: Ao colocar colchetes [value]="pensamento.conteudo", o Angular vai na Classe TS buscar a prop condizente com o nome passado -->
 <!-- Interpolação: Com Property Binding utiliza duplos colchetes {{ prop.name }} -->
+
+<!-- TWO-WAY DATA BINDING: entre Templete e Component, com [(ngFor)] do FormsModule -->
+<!-- Diretiva ngModel: Diretivas são Classes que conseguem modificar elementos na aplicação Angular -->
 <section class="container criar-pensamentos ff-inter">
   <header class="header">
     <h2>Adicione um <br>pensamento novo:</h2>
@@ -15,7 +18,7 @@
       id="pensamento"
       name="pensamento"
       placeholder="Digite o pensamento"
-      [value]="pensamento.conteudo"
+      [(ngModel)]="pensamento.conteudo"
     >
 
     <label for="autoria">Autoria ou fonte</label>
@@ -25,7 +28,7 @@
       id="autoria"
       name="autoria"
       placeholder="Digite a autoria ou fonte"
-      [value]="pensamento.autoria" 
+      [(ngModel)]="pensamento.autoria" 
     >
 
     <label for="modelo">Selecione o modelo do card:</label>
@@ -37,6 +40,7 @@
             id="modelo1"
             value="modelo1"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -58,6 +62,7 @@
             id="modelo2"
             value="modelo2"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
@@ -79,6 +84,7 @@
             id="modelo3"
             value="modelo3"
             name="modelo-card"
+            [(ngModel)]="pensamento.modelo"
           >
           <div class="custom-radio">
             <span></span>
