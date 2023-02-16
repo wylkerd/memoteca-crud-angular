@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 // Service é nada mais que um Repository, que possui lógica do negócio e acessa a base de dados
 
@@ -7,5 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class PensamentoService {
 
-  constructor() { }
+  // Injetando HttpClient, e determinado  http como atributo desta Classe
+  constructor(private http: HttpClient) { }
+
 }
