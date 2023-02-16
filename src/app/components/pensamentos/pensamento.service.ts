@@ -54,4 +54,6 @@ export class PensamentoService {
 
   De acordo com a documentação do Angular, injeção de dependência é um padrão de projeto 
   no qual uma classe solicita dependências de fontes externas ao invés de criá-las.
+
+  - O HttpClient retorna Observable das chamadas de métodos HTTP, o que facilita na implementação de regras em caso de sucesso, erro e conclusão da requisição.
 */
