@@ -21,7 +21,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Json Server
 Create a folder `backend` on the root of project. Inside the `backend` folder run `npm init -y` and after `npm i json-server`. Create a file named `db.json` inside the `backend` folder.
 
-<img src="comoUsarJsonServer.png" />
+<img src="comoUsarJsonServer.png"/>
+
+## Service
+Run `ng generate service ./path/to/serviceName` to generate a new service
+
+<img src="criandoService.png"/>
 
 ## Build
 
